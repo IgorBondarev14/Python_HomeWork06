@@ -1,3 +1,8 @@
-#Напишите программу, удаляющую из текста все слова, содержащие ""абв""
+# Задайте последовательность чисел. Напишите программу, которая выведет список 
+# неповторяющихся элементов исходной последовательности.
 
-print(*list(filter(lambda x: not 'абв' in x, input(" Введите текст на проверку:\n").split(' '))))
+from random import randint
+elements = [randint(1, 10) for x in range(int(input("Введите размер последовательности чисел: ")))]
+print(elements)
+Uniqe_elements = list(filter(lambda x: elements.count(x) == 1, elements))
+print(Uniqe_elements)
